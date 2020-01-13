@@ -1,31 +1,38 @@
-#YAAW for Chrome
+# YAAW for Chrome [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dennnbdlpgjgbcjfgaohdahloollfgoc.svg)](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc) [![GitHub Actions status](https://github.com/acgotaku/YAAW-for-Chrome/workflows/check-pr/badge.svg)](https://github.com/acgotaku//YAAW-for-Chrome/actions)
 
-简单的把YAAW打包发布到Chrome上,安装之后会出现YAAW的图标.
+You can use YAAW as the chrome extension.
 
-#Usage
+# Usage
 
+Click the YAAW icon, you will get the dashboard. Don't forget to set the JSON-RPC Path.
 
-点击YAAW图标便会出现YAAW的管理界面,设置好 JSON-RPC Path即可.
+Right click YAAW icon, open options menu.
 
-右键点击图标,打开选项菜单.可以设置是否开启右键菜单 和 下载拦截
+- Website whitelist : ignore file size limit, all file download be imported into Aria2c
+- Website blocklist : all file download by browser
 
-如果Chrome设置了下载之前不询问下载位置的话,可以自动取消Chrome下载 使用Aria2c下载.
+Website example:
 
-并且可以设置多大的文件使用导出下载,小文件使用Chrome自带的下载功能,拦截下载默认使用第一个RPC地址.
+- \*.baidu.com `// match all baidu domain, such as pan.baidu.com, www.baidu.com`
+- https://github.com/ `// match github.com`
+- github.com `// match github.com`
 
-开启右键菜单之后任意链接都可以右键导出到YAAW进行下载.
+Please split website with enter(`\n`).
 
+Download interception feature only use first RPC address.
 
-#Install
-作为chrome扩展安装即可.
+# Install
 
-Web Store link : 
+Please visit [Web Store](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
 
-https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc
+# Contribution
 
+Please make sure to read the [Contributing Guide](https://github.com/acgotaku/YAAW-for-Chrome/blob/master/.github/CONTRIBUTING.md) before making a pull request.
 
-License
--------
+# License
+
+---
+
 ![GPLv3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
 YAAW-for-Chrome is licensed under [GNU General Public License](https://www.gnu.org/licenses/gpl.html) Version 3 or later.
